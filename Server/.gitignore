@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/models/db.js
 /.pnp
 .pnp.js
 /models/db.js

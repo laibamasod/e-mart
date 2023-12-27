@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 //for atlas
-const dbURL= 'mongodb+srv://tormik_pindi:ALK36LQXD40fM8he@cluster1.5glpwoz.mongodb.net/EMART';
+const dbURL= 'mongodb+srv://nasir_pindi:nasir2008@cluster1.5glpwoz.mongodb.net/EMART';
 
 mongoose.connect(dbURL)
 .then((result)=>{
