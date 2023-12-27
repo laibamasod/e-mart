@@ -1,12 +1,20 @@
 const express = require('express');
 require('./models/db');
-const emartController = require('./controllers/emartController');
+const buyerRegController = require('./controllers/buyerRegController');
+const buyerController = require('./controllers/buyerController');
+const purchaseController = require('./controllers/purchaseController');
+const cartController = require('./controllers/cartController');
+
 const bodyParser = require("body-parser");
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
-app.use("/", emartController);
+app.use("/buyerreg", buyerRegController);
+app.use("/buyer", buyerController);
+app.use("/purchase", purchaseController);
+app.use("/cart", cartController);
+
 app.listen(8080, ()=>{
     console.log("Server at 8080");
 });

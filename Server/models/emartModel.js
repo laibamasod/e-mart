@@ -41,9 +41,18 @@ const Buyer = mongoose.model('Buyer', buyerSchema);
 
 // Schema for Buyer Registration
 const buyerRegistrationSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  password: String,
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
   verificationCode: String
 });
 
