@@ -6,6 +6,8 @@ const purchaseController = require('./controllers/purchaseController');
 const cartController = require('./controllers/cartController');
 
 const productController = require('./controllers/productController');
+const sellerController = require('./controllers/sellerController');
+const sellerRegController = require('./controllers/sellerRegController')
 const bodyParser = require("body-parser");
 
 const app = express();
@@ -17,6 +19,8 @@ app.use("/purchase", purchaseController);
 app.use("/cart", cartController);
 
 app.use("/product", productController );
+app.use("/seller", sellerController);
+app.use("/sellerreg", sellerRegController);
 app.listen(8080, ()=>{
     console.log("Server at 8080");
 });
