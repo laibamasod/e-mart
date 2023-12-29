@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+//import App from './App';
+import AdvertisementComponent from './components/advertisementComponent';
+import ProductDetailComponent from './components/productDetalComponent';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+<AdvertisementComponent/>
+<ProductDetailComponent/>
   </React.StrictMode>
 );
 
