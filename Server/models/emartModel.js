@@ -15,7 +15,8 @@ const productSchema = new mongoose.Schema({
   sellerID: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Seller'
-  }
+  },
+  pictureURL: String
 });
 
 const Product = mongoose.model('Product', productSchema);
