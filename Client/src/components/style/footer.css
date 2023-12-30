@@ -1,0 +1,82 @@
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: #000; /* Adjust the color as needed */
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .footer-link:hover {
+    color: #555; /* Change color on hover if needed */
+  }
+
+  
+  .payment-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    gap: 10px; /* Adjust the gap between images */
+  }
+  
+  .payment-images img {
+    width: 80%; /* Ensure images take up full width of their container */
+    height: auto; /* Maintain aspect ratio */
+    /* Additional styling for image size or alignment */
+  }
+
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Adjust the width of each icon */
+    height: 40px; /* Adjust the height of each icon */
+    margin-right: 10px; /* Adjust spacing between icons */
+    border-radius: 50%; /* Make the icons round */
+    background-color: #ffab3c; /* Example background color for icons */
+    text-decoration: none; /* Remove default link underline */
+    color: #ffffff; /* Color of the icon */
+  }
+  
+  .footer {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+  }
+  
+  .footer h4 {
+    color: rgb(255, 100, 10);
+    font-size: 18px;
+    margin-bottom: 15px;
+    
+  }
+  
+  .footer .footer-links {
+    margin-bottom: 20px;
+  }
+  
+  .footer .footer-links a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .footer .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer .flag-icon {
+    margin-right: 5px;
+  }
+  
+
+  
+  
