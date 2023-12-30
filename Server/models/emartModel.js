@@ -23,7 +23,7 @@ const Product = mongoose.model('Product', productSchema);
 
 // Schema for Category
 const categorySchema = new mongoose.Schema({
-  name: String
+  category_name: String
 });
 
 const Category = mongoose.model('Category', categorySchema);
