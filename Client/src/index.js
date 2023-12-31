@@ -5,8 +5,10 @@ import './index.css';
 //import App from './App';
 import Homepage from './components/Homepage';
 import Signup from './components/Signup';
+import Login from './components/loginComponent';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import PurchaseComponent from './components/purchaseComponent';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,6 +20,8 @@ root.render(
  <Routes> 
       <Route path="/" element={ <Homepage /> } />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/purchase" element={<PurchaseComponent />} />
         {/* Add more routes as needed */}
     </Routes>
     <Footer />

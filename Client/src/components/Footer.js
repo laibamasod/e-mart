@@ -1,7 +1,13 @@
 import React from "react";
 import "./style/footer.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaGlobe } from 'react-icons/fa';
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaGlobe,
+} from "react-icons/fa";
 
 import payPic1 from "../images/payment1.jpg";
 import payPic2 from "../images/payment2.jpg";
@@ -126,7 +132,7 @@ const Footer = () => (
 
         <div className="col-md-3">
           <h4>Exclusive Deal and Offers!</h4>
-          <div className="payment-images">
+          <div className="offer-images">
             <img src={offerPic1} alt="Offer logos" />
             <img src={offerPic2} alt="Offer logos" />
             <img src={offerPic3} alt="Offer logos" />
@@ -134,22 +140,22 @@ const Footer = () => (
           <br />
           <h4>Follow US</h4>
           <div className="social-icons">
-          <a href="#" className="social-icon">
-            <FaFacebook />
-          </a>
-          <a href="#" className="social-icon">
-            <FaTwitter />
-          </a>
-          <a href="#" className="social-icon">
-            <FaInstagram />
-          </a>
-          <a href="#" className="social-icon">
-            <FaYoutube />
-          </a>
-          <a href="#" className="social-icon">
-            <FaGlobe />
-          </a>
-        </div>
+            <a href="#" className="social-icon">
+              <FaFacebook />
+            </a>
+            <a href="#" className="social-icon">
+              <FaTwitter />
+            </a>
+            <a href="#" className="social-icon">
+              <FaInstagram />
+            </a>
+            <a href="#" className="social-icon">
+              <FaYoutube />
+            </a>
+            <a href="#" className="social-icon">
+              <FaGlobe />
+            </a>
+          </div>
         </div>
       </div>
     </div>
