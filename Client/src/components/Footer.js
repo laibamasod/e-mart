@@ -7,7 +7,6 @@ import payPic1 from "../images/payment1.jpg";
 import payPic2 from "../images/payment2.jpg";
 import payPic3 from "../images/payment3.jpg";
 import payPic4 from "../images/payment4.jpg";
-
 import offerPic1 from "../images/offerPic1.png";
 import offerPic2 from "../images/offerPic2.png";
 import offerPic3 from "../images/offerPic3.png";
@@ -135,19 +134,19 @@ const Footer = () => (
           <br />
           <h4>Follow US</h4>
           <div className="social-icons">
-          <a href="url_to_facebook" className="social-icon">
+          <a href="#" className="social-icon">
             <FaFacebook />
           </a>
-          <a href="url_to_twitter" className="social-icon">
+          <a href="#" className="social-icon">
             <FaTwitter />
           </a>
-          <a href="url_to_instagram" className="social-icon">
+          <a href="#" className="social-icon">
             <FaInstagram />
           </a>
-          <a href="url_to_youtube" className="social-icon">
+          <a href="#" className="social-icon">
             <FaYoutube />
           </a>
-          <a href="url_to_web" className="social-icon">
+          <a href="#" className="social-icon">
             <FaGlobe />
           </a>
         </div>

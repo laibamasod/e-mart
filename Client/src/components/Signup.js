@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { faUser, faEnvelope, faLock, faKey, faShieldAlt} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Signup.css';
+import './style/Signup.css';
 import vectorImage from '../images/vector.jpg';
 
 const Signup = () => {
