@@ -77,6 +77,21 @@
     margin-right: 5px;
   }
   
-
+  .offer-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    gap: 10px; /* Adjust the gap between images */
+  }
+  
+  .offer-images img {
+    width: calc(100% - 5px); /* Adjust width or margin as needed */
+    margin-right: 10px; /* Adjust margin between images */
+    margin-bottom: 10px; /* Adjust margin between rows */
+  }
+  
+  .offer-images img:nth-child(3n + 3) {
+    width: 120%; /* The third image spans the whole row */
+    margin-right: 0; /* No right margin for the third image */
+  }
   
   

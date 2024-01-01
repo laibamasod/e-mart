@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import productImage from '../images/productImage.jpg'; // Replace with the actual product image path
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+import productImage from "../images/productImage.jpg"; // Replace with the actual product image path
 
 const ProductDetailComponent = () => {
+  const navigate = useNavigate(); // Initialize useHistory
   const [quantity, setQuantity] = useState(1); // Quantity state with a default value of 1
 
   // Function to handle increasing quantity
@@ -23,6 +25,10 @@ const ProductDetailComponent = () => {
     // You can add your logic to save the data to the database here
   };
 
+  const handleClick = () => {
+    navigate('/purchase');
+  };
+
   return (
     <section className="product-detail-section">
       <div className="container">
@@ -32,7 +38,7 @@ const ProductDetailComponent = () => {
               src={productImage}
               alt="Product"
               className="product-image"
-              style={{ maxWidth: '100%', height: 'auto', maxHeight: '300px' }} // Adjust dimensions here
+              style={{ maxWidth: "100%", height: "auto", maxHeight: "300px" }} // Adjust dimensions here
             />
           </div>
           <div className="col-md-6">
@@ -41,7 +47,7 @@ const ProductDetailComponent = () => {
             <p>Rating: 4.5</p>
             <p>Price: $99.99</p>
             <form onSubmit={handleSubmit}>
-              <div className="input-group mb-3" style={{ maxWidth: '200px' }}>
+              <div className="input-group mb-3" style={{ maxWidth: "200px" }}>
                 <button
                   className="btn btn-outline-secondary"
                   type="button"
@@ -64,11 +70,11 @@ const ProductDetailComponent = () => {
                   +
                 </button>
               </div>
-              <button type="submit" className="btn btn-primary me-2">
-                Buy Now
-              </button>
-              <button type="submit" className="btn btn-success">
+              <button type="submit" className="btn btn-primary me-3">
                 Add to Cart
+              </button>
+              <button type="submit" className="btn btn-success" onClick={handleClick}>
+                Buy Now
               </button>
             </form>
           </div>
