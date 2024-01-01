@@ -19,7 +19,7 @@ root.render(
       <Route path="/" element={ <Homepage /> } />
       <Route path="/signup" element={<Signup />} />
         {/* Add more routes as needed */}
-    </Routes>
+  </Routes>
     <Footer />
 </Router>,
 );

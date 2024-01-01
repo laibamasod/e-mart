@@ -41,7 +41,7 @@
     height: 40px; /* Adjust the height of each icon */
     margin-right: 10px; /* Adjust spacing between icons */
     border-radius: 50%; /* Make the icons round */
-    background-color: #ffab3c; /* Example background color for icons */
+    background-color: #f85606; /* Example background color for icons */
     text-decoration: none; /* Remove default link underline */
     color: #ffffff; /* Color of the icon */
   }
@@ -52,7 +52,7 @@
   }
   
   .footer h4 {
-    color: rgb(255, 100, 10);
+    color: #f85606;
     font-size: 18px;
     margin-bottom: 15px;
     
