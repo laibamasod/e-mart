@@ -23,7 +23,7 @@ root.render(
       <Route path="/login" element={<Login />} />
       <Route path="/purchase" element={<PurchaseComponent />} />
         {/* Add more routes as needed */}
-    </Routes>
+  </Routes>
     <Footer />
 </Router>,
 );

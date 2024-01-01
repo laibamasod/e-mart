@@ -1,0 +1,93 @@
+body{
+  font-family: "Roboto", sans-serif;
+  
+}
+
+.input-group {
+    height: 40px !important;
+    margin-top: 10px;
+   
+  }
+
+.header-bg {
+    background-color: #ee7335;
+  display: block;
+  top: 0;
+  padding: 10px 100px !important;
+  border: none !important;
+
+  }
+ .form-inline{
+    margin-right: 20px;
+ }
+  .navbar-nav{
+    margin-top: 10px;
+  
+  }
+
+  .form-control.py-2 {
+    outline: none !important;
+    border: 1px solid transparent !important;
+    text-indent: 20px;
+    box-shadow: none !important;
+    border-radius: 14px;
+    font-size: 14px; 
+    width: 200px;
+    height: 40px !important;
+
+  }
+  .top-header{
+    background-color: #ee7335;
+    top: 0;
+    border: none !important;
+    padding: 1px 100px !important;
+  }
+  .small-logo {
+    margin-right: 5px;
+    height: 20px !important; 
+  }
+  a.upper-head {
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline !important;
+}
+  a.upper-head:hover{
+     color:#fbbfa1 !important;
+  }
+  .hoverable-text{
+    font-size: 13px;
+    color: #fff !important ;
+  }
+  .hoverable-text:hover{
+    color:#fbbfa1 !important;
+    cursor: pointer;
+  }
+  .custom-toggler.navbar-toggler {
+    border-color: #fff;
+  } 
+  /* Add shadow effect on hover */
+  .nav-link:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  }
+  .btn.px-3{
+    border-radius: 16px;
+  }
+  .navbar-nav {
+    gap: 10px;
+   
+  }
+  .form-control.py-2:focus {
+    box-shadow: none;
+    border-color: none;
+  }
+
+  .navbar .container {
+    display: flex;
+    justify-content: space-between; /* Centers the navbar contents */
+    align-items: center; /* Aligns items vertically */
+  }
+  .navbar-brand img {
+    max-height: 50px !important; 
+  }
+  

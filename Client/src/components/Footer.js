@@ -18,9 +18,9 @@ import offerPic2 from "../images/offerPic2.png";
 import offerPic3 from "../images/offerPic3.png";
 
 const Footer = () => (
-  <footer className="footer">
-    <div className="container">
-      <div className="row">
+  <footer className="footer mt-5 ">
+    <div className="container mt-5">
+      <div className="row ">
         <div className="col-md-3">
           <h4>Customer Care</h4>
           <div className="footer-links">

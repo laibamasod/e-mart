@@ -1,6 +1,6 @@
 
 body {
-    font-family: Verdana, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
 .input-container {
@@ -39,15 +39,15 @@ body {
 button.signup {
     background-color: #f85606;
     color:#fff;
-    padding: 12px 20px;
-    font-size: 20px;
-    width: 50%;
-    padding: 12px 30px;
+    padding: 12px 10px;
+    font-size: 15px;
+    width: 30%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     border: none;
     border-radius: 3px;
+
 }
 button.verify {
     background-color: #fff;

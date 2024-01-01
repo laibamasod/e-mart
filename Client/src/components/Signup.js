@@ -6,8 +6,8 @@ import vectorImage from '../images/vector.jpg';
 
 const Signup = () => {
   return (
-    <section className="vh-100 " style={{ backgroundColor: '#eee' }}>
-      <div className="container h-100">
+    <section className="vh-100 mb-5" style={{ backgroundColor: '#eee' }}>
+      <div className="container h-100 mb-5">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-lg-12 col-xl-11">
             <div className="card text-black" style={{ borderRadius: '25px' }}>
@@ -52,7 +52,7 @@ const Signup = () => {
                           <label className="form-label" htmlFor="repeatpass">Repeat your password</label>
                         </div>
                       </div>
-                      <div class="form-check d-flex justify-content-center mt-2">
+                      <div class="form-check d-flex justify-content-center mt-2 mb-3">
                         <p class="form-check-label" >
                          By clicking “SIGN UP”, I agree to Daraz's <a href="#">Terms of Use & Privacy Policy</a>.</p>
                        </div>
