@@ -7,7 +7,7 @@
     margin-bottom: 0 !important;
   }
   
-  /* Adjust the padding for the category links */
+
   .cat-nav .nav-link {
     padding: 5px 10px !important;
     font-size: 12px !important;
@@ -17,8 +17,12 @@
   .navbar1 {
     border-radius: 20px;
     overflow: hidden;
+    background-color: white;
   }
   .nav-link:hover {
-    color: #ee7335; /* Change to your desired color */
+    color: #ee7335; 
+  }
+  .card {
+    border-radius: 15px; 
   }
   

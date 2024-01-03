@@ -4,7 +4,7 @@ import ProductDetailComponent from './productDetalComponent';
 
 const Homepage = () => {
   return (
-    <div>
+    <div className='bg-light py-2'>
       <AdvertisementComponent />
       {/* <ProductDetailComponent /> */}
     </div>
