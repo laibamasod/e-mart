@@ -6,7 +6,7 @@ const Homepage = () => {
   return (
     <div>
       <AdvertisementComponent />
-      <ProductDetailComponent />
+      {/* <ProductDetailComponent /> */}
     </div>
   );
 };
