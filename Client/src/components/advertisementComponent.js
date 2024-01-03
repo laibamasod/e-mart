@@ -49,7 +49,7 @@ const AdvertisementComponent = () => {
     <div className="container mt-3">
       <div className="row">
         <div className="col-md-2">
-          <nav className="navbar navbar1 bg-light ">
+          <nav className="navbar navbar1  ">
             <div className="container-fluid">
               <ul className="navbar-nav cat-nav navhead">
                 <li className="nav-item navitems">

@@ -17,6 +17,7 @@
   .navbar1 {
     border-radius: 20px;
     overflow: hidden;
+    background-color: white;
   }
   .nav-link:hover {
     color: #ee7335; /* Change to your desired color */
