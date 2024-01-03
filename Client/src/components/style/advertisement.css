@@ -1,0 +1,22 @@
+/* advertisement.css */
+
+/* Reset margin and padding for the list items */
+.navhead .navitems {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Adjust the padding for the category links */
+  .cat-nav .nav-link {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+  }
+  
+  /* Apply border radius to the entire navbar */
+  .navbar1 {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  

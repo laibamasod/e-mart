@@ -58,16 +58,15 @@ body{
   .hoverable-text{
     font-size: 13px;
     color: #fff !important ;
-  }
-  .hoverable-text:hover{
-    color:#fbbfa1 !important;
     cursor: pointer;
   }
+ 
+
   .custom-toggler.navbar-toggler {
     border-color: #fff;
   } 
   /* Add shadow effect on hover */
-  .nav-link:hover {
+  .nav-link1:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
   }
   .btn.px-3{
