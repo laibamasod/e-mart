@@ -46,9 +46,9 @@ const AdvertisementComponent = () => {
   };
 
   return (
-    <div className="container mt-3">
+    <div className="container-fluid mt-3">
       <div className="row">
-        <div className="col-md-2">
+        <div className="col-md-3 col-lg-2">
           <nav className="navbar navbar1  ">
             <div className="container-fluid">
               <ul className="navbar-nav cat-nav navhead">
@@ -88,7 +88,7 @@ const AdvertisementComponent = () => {
             </div>
           </nav>
         </div>
-        <div className="col-md-10">
+        <div className="col-md-9 col-lg-10">
           <div className="card">
             <div className="card-body p-0 position-relative">
               <div
