@@ -1,9 +1,5 @@
 const express = require('express');
-const cors = require('cors');
-const app = express();
 
-// Apply CORS middleware
-app.use(cors());
 const {
     Category,
 } = require('../models/emartModel')// Assuming you have a Category model

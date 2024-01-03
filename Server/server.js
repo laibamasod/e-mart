@@ -1,5 +1,7 @@
 const express = require('express');
 require('./models/db');
+const cors = require('cors');
+
 const buyerRegController = require('./controllers/buyerRegController');
 const buyerController = require('./controllers/buyerController');
 const purchaseController = require('./controllers/purchaseController');
@@ -14,6 +16,9 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+
+app.use(cors());
+
 app.use("/buyerreg", buyerRegController);
 app.use("/buyer", buyerController);
 app.use("/purchase", purchaseController);
@@ -22,6 +27,7 @@ app.use("/cart", cartController);
 app.use("/product", productController );
 app.use("/seller", sellerController);
 app.use("/sellerreg", sellerRegController);
+
 
 app.use("/category", categoryController);
 

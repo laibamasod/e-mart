@@ -16,7 +16,7 @@ const productSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Seller'
   },
-  pictureURL: String
+  pictureURL: Buffer,
 });
 
 const Product = mongoose.model('Product', productSchema);
