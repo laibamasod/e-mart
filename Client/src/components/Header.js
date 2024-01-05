@@ -14,7 +14,7 @@ const Header = () => {
       <div className="d-none d-sm-none d-md-none d-lg-block top-header sticky-top  ">
         <div className="container-fluid px-5 py-2 d-flex align-items-center justify-content-between">
           <div>
-            <a href="#" className="upper-head mx-2">
+            <a href="/sellerDash" className="upper-head mx-2">
               {" "}
               <span>Become a Seller</span>{" "}
             </a>
