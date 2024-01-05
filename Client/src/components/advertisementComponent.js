@@ -142,14 +142,14 @@ const AdvertisementComponent = () => {
                   type="button"
                   onClick={prevSlide}
                 >
-                  {/* Previous icon */}
+                
                 </button>
                 <button
                   className="carousel-control-next"
                   type="button"
                   onClick={nextSlide}
                 >
-                  {/* Next icon */}
+                
                 </button>
               </div>
             </div>
