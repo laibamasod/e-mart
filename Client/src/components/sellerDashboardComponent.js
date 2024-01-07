@@ -72,7 +72,7 @@ const SellerDashboard = () => {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       console.log('Product added:', response.data);
-      // Add logic to handle the successful addition of the product
+ 
     } catch (error) {
       console.error('Error adding product:', error);
       // Handle the error case
