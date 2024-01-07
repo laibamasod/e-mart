@@ -1,7 +1,9 @@
-import {React, useEffect, useState} from "react";
+import { React, useEffect, useState } from "react";
 import "./style/Header.css";
 import darazlogo from "../images/darazlogo.png";
 import logo1 from "../images/logo2.png";
+import { Link } from "react-router-dom";
+
 import {
   faSearch,
   faShoppingCart,
@@ -12,15 +14,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Header = () => {
   const [userData, setUserData] = useState(null);
 
+  const [searchKeyword, setSearchKeyword] = useState("");
+
   console.log("header has ", userData);
   const handleLogout = () => {
     // Handle logout logic here (clear sessionStorage, redirect user, etc.)
-    sessionStorage.removeItem('userData');
-    window.location.href = '/';
+    sessionStorage.removeItem("userData");
+    window.location.href = "/";
     console.log(userData);
   };
+
   useEffect(() => {
-    const storedUserData = JSON.parse(sessionStorage.getItem('userData'));
+    const storedUserData = JSON.parse(sessionStorage.getItem("userData"));
     if (storedUserData) {
       setUserData(storedUserData);
     }
@@ -43,7 +48,7 @@ const Header = () => {
               <span>Daraz Affiliate Program</span>
             </a>
           </div>
-          <div >
+          <div>
             <img
               className="hoverable-text small-logo"
               src={logo1}
@@ -72,59 +77,85 @@ const Header = () => {
           </a>
 
           <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <form className="form-inline my-2 my-lg-0 flex-grow-1 d-flex justify-content-center">
+            <form
+              onSubmit={(event) => {
+                event.preventDefault();
+              }}
+              className="form-inline my-2 my-lg-0 flex-grow-1 d-flex justify-content-center"
+            >
               <div className="input-group flex-grow-1">
                 <input
                   className="form-control py-2 px-2 narrower-input"
                   type="search"
                   placeholder="Search in Daraz"
                   aria-label="Search"
+                  value={searchKeyword}
+                  onChange={(e) => setSearchKeyword(e.target.value)}
                 />
                 <div className="input-group-append">
-                  <button
+                  <Link
+                    to={`/search/${searchKeyword}`}
                     className="btn btn-light btn-outline-light px-3"
-                    type="submit"
                   >
                     <FontAwesomeIcon
                       icon={faSearch}
                       style={{ color: "orange" }}
                     />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </form>
             <ul className="navbar-nav ml-auto d-flex align-items-center">
-            {userData ? (
-          <>
-            <li className="nav-item">
-              <button className="nav-link nav-link1" style={{ color: "white" }}>
-                {userData.name} {/* Display user's name */}
-              </button>
-            </li>
-            <li className="nav-item">
-              <button className="nav-link nav-link1" onClick={handleLogout} style={{ color: "white" }}>
-                Logout {/* Logout button */}
-              </button>
-            </li>
-          </>
-        ) : (
-          <>
-            <li className="nav-item ">
-              <a className="nav-link nav-link1" href="/login" style={{ color: "white" }}>
-                <FontAwesomeIcon icon={faUser} />
-                Login
-              </a>
-            </li>
-            <li className="nav-item ">
-              <a className="nav-link nav-link1" href="/signup" style={{ color: "white" }}>
-                <FontAwesomeIcon icon={faUser} />
-                Signup
-              </a>
-            </li>
-          </>
-        )}
+              {userData ? (
+                <>
+                  <li className="nav-item">
+                    <button
+                      className="nav-link nav-link1"
+                      style={{ color: "white" }}
+                    >
+                      {userData.name} {/* Display user's name */}
+                    </button>
+                  </li>
+                  <li className="nav-item">
+                    <button
+                      className="nav-link nav-link1"
+                      onClick={handleLogout}
+                      style={{ color: "white" }}
+                    >
+                      Logout {/* Logout button */}
+                    </button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li className="nav-item ">
+                    <a
+                      className="nav-link nav-link1"
+                      href="/login"
+                      style={{ color: "white" }}
+                    >
+                      <FontAwesomeIcon icon={faUser} />
+                      Login
+                    </a>
+                  </li>
+                  <li className="nav-item ">
+                    <a
+                      className="nav-link nav-link1"
+                      href="/signup"
+                      style={{ color: "white" }}
+                    >
+                      <FontAwesomeIcon icon={faUser} />
+                      Signup
+                    </a>
+                  </li>
+                </>
+              )}
               <li className="nav-item">
-                <a className="nav-link nav-link1" href="#" style={{ color: "white" }}>
+                <a
+                  className="nav-link nav-link1"
+                  href="#"
+                  style={{ color: "white" }}
+                >
                   <FontAwesomeIcon icon={faShoppingCart} />
                   Cart
                 </a>

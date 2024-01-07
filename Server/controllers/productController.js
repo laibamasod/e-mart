@@ -120,4 +120,31 @@ router.delete("/deleteProducts/:id", async (req, res) => {
   }
 });
 
+router.get("/searchProducts", async (req, res) => {
+  const { keyword, offset } = req.query;
+  console.log(keyword)
+
+  try {
+    const products = await Product.find({
+      $or: [
+        { name: { $regex: keyword, $options: 'i' } },
+        { description: { $regex: keyword, $options: 'i' } },
+      ],
+    }).skip(parseInt(offset)); 
+
+    const productsDetails = products.map(product => ({
+      _id: product._id.toString(), // Convert ObjectId to string
+      name: product.name,
+      price: product.price,
+      pictureURL: product.pictureURL ? product.pictureURL.data.toString('base64') : null,
+      // Include other fields as needed
+    }));
+
+    res.status(200).json(productsDetails);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
 module.exports = router;

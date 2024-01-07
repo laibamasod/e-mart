@@ -20,7 +20,6 @@ const Login = () => {
       sessionStorage.setItem('userData', JSON.stringify(response.data));
       console.log(response.data)
       alert("Login Successful");
-      window.location.reload();
       navigate('/'); // Navigate to homepage after successful login
     } catch (error) {
       if (error.response) {
