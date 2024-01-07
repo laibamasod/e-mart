@@ -16,7 +16,10 @@ const productSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Seller'
   },
-  pictureURL: Buffer,
+  pictureURL:{ 
+    data: Buffer, 
+    contentType: String
+  }
 });
 
 const Product = mongoose.model('Product', productSchema);
