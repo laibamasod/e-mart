@@ -1,4 +1,4 @@
-import {React, useEffect} from "react";
+import {React, useEffect, useState} from "react";
 import "./style/Header.css";
 import darazlogo from "../images/darazlogo.png";
 import logo1 from "../images/logo2.png";
@@ -8,7 +8,23 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Header = () => {
+  const [userData, setUserData] = useState(null);
+
+  console.log("header has ", userData);
+  const handleLogout = () => {
+    // Handle logout logic here (clear sessionStorage, redirect user, etc.)
+    sessionStorage.removeItem('userData');
+    window.location.href = '/';
+    console.log(userData);
+  };
+  useEffect(() => {
+    const storedUserData = JSON.parse(sessionStorage.getItem('userData'));
+    if (storedUserData) {
+      setUserData(storedUserData);
+    }
+  }, []);
   return (
     <div>
       <div className="d-none d-sm-none d-md-none d-lg-block top-header sticky-top  ">
@@ -78,18 +94,35 @@ const Header = () => {
               </div>
             </form>
             <ul className="navbar-nav ml-auto d-flex align-items-center">
-              <li className="nav-item ">
-                <a className="nav-link nav-link1" href="#" style={{ color: "white" }}>
-                  <FontAwesomeIcon icon={faUser} />
-                  Login
-                </a>
-              </li>
-              <li className="nav-item ">
-                <a className="nav-link nav-link1" href="#" style={{ color: "white" }}>
-                  <FontAwesomeIcon icon={faUser} />
-                  Signup
-                </a>
-              </li>
+            {userData ? (
+          <>
+            <li className="nav-item">
+              <button className="nav-link nav-link1" style={{ color: "white" }}>
+                {userData.name} {/* Display user's name */}
+              </button>
+            </li>
+            <li className="nav-item">
+              <button className="nav-link nav-link1" onClick={handleLogout} style={{ color: "white" }}>
+                Logout {/* Logout button */}
+              </button>
+            </li>
+          </>
+        ) : (
+          <>
+            <li className="nav-item ">
+              <a className="nav-link nav-link1" href="/login" style={{ color: "white" }}>
+                <FontAwesomeIcon icon={faUser} />
+                Login
+              </a>
+            </li>
+            <li className="nav-item ">
+              <a className="nav-link nav-link1" href="/signup" style={{ color: "white" }}>
+                <FontAwesomeIcon icon={faUser} />
+                Signup
+              </a>
+            </li>
+          </>
+        )}
               <li className="nav-item">
                 <a className="nav-link nav-link1" href="#" style={{ color: "white" }}>
                   <FontAwesomeIcon icon={faShoppingCart} />

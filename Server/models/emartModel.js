@@ -54,7 +54,8 @@ const buyerRegistrationSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  verificationCode: String
+  isVerified: {type: Boolean, default: false},
+  emailToken: String
 });
 
 const BuyerRegistration = mongoose.model('BuyerRegistration', buyerRegistrationSchema);

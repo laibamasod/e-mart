@@ -10,6 +10,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import PurchaseComponent from './components/purchaseComponent';
 import SellerDashboard from './components/sellerDashboardComponent';
+import VerifyEmail from './components/VerifyEmail';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -24,6 +25,7 @@ root.render(
       <Route path="/login" element={<Login />} />
       <Route path="/purchase" element={<PurchaseComponent />} />
       <Route path="/sellerDash" element={<SellerDashboard/>}/>
+      <Route path="/verify-email" element={<VerifyEmail />} />
         {/* Add more routes as needed */}
   </Routes>
     <Footer />

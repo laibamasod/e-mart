@@ -9,13 +9,13 @@ body {
     }
 
  
-  input[type="text"], input[type="password"] {
+  input[type="text"], input[type="password"], input[type="email"]:focus {
     width: 100%;
     position: relative;
     display: inline-block;
     color: #000000;
     background-color: transparent;
-    border: none;
+    border: none !important;
     font-size: 1em;
     outline: none;
     z-index: 20;
@@ -23,6 +23,8 @@ body {
   }
  
   input[type="text"]:focus + label,
+  .input-container input[type="email"]:focus + label,
+  .input-container input[type="email"]:valid + label,
   .input-container input[type="text"]:valid +  label,
   .input-container input[type="password"]:focus +  label,
   .input-container input[type="password"]:valid + label {
@@ -32,6 +34,7 @@ body {
    
   }
   input[type="text"]:focus,
+  .input-container input[type="email"]:focus,
 .input-container input[type="password"]:focus {
   /* Adjust the top margin or padding to prevent movement */
   margin-top: -20px; /* Adjust as needed */
@@ -70,4 +73,10 @@ button.signup:hover {
     z-index: 10;
     position: absolute;
     left: 10px; 
+  }
+
+  .error-message {
+    font-size: 10px; 
+    color: red;
+   
   }
