@@ -49,7 +49,7 @@ const ProductDetailComponent = () => {
   return (
     <>
     <div>
-      <AdvertisementComponent />
+      
     </div>
     <section className="product-detail-section">
       <div className="container">
