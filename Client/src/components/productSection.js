@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import "./style/productSection.css";
 
 const ProductSection = () => {
+
   const [productsToShow, setProductsToShow] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [maxProducts, setMaxProducts] = useState(0);

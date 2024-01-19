@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import loadingGif from "../images/load.gif";
-import AdvertisementComponent from "./advertisementComponent";
+import { useCart } from '../CartContext';
 
 const ProductDetailComponent = () => {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ const ProductDetailComponent = () => {
   const [product, setProduct] = useState(null); // State to store product details
   const [isLoading, setIsLoading] = useState(false);
   const [quantity, setQuantity] = useState(1); // Quantity state with a default value of 1
-
+  const { addToCart } = useCart();
   useEffect(() => {
     const fetchProduct = async () => {
       setIsLoading(true);
@@ -98,7 +98,7 @@ const ProductDetailComponent = () => {
                         +
                       </button>
                     </div>
-                    <button type="submit" className="btn btn-primary me-3">
+                    <button  type="button" className="btn btn-primary me-3" onClick={() => addToCart(product)}>
                       Add to Cart
                     </button>
                     <button type="submit" className="btn btn-success">

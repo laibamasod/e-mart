@@ -2,7 +2,8 @@ import { React, useEffect, useState } from "react";
 import "./style/Header.css";
 import darazlogo from "../images/darazlogo.png";
 import logo1 from "../images/logo2.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 import {
   faSearch,
@@ -13,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
   const [userData, setUserData] = useState(null);
-
+  const navigate = useNavigate();
   const [searchKeyword, setSearchKeyword] = useState("");
 
   console.log("header has ", userData);
@@ -23,7 +24,16 @@ const Header = () => {
     window.location.href = "/";
     console.log(userData);
   };
-
+  const handleCartClick = () => {
+    // Check if the user is logged in
+    if (userData) {
+      // Redirect to the cart page
+      navigate("/cart");
+    } else {
+      // Redirect to the login page
+      navigate("/login");
+    }
+  };
   useEffect(() => {
     const storedUserData = JSON.parse(sessionStorage.getItem("userData"));
     if (storedUserData) {
@@ -151,14 +161,17 @@ const Header = () => {
                 </>
               )}
               <li className="nav-item">
+              <button  onClick={handleCartClick}className="nav-link nav-link1"  >
                 <a
-                  className="nav-link nav-link1"
+               
                   href="#"
-                  style={{ color: "white" }}
+                  style={{ color: "white", textDecoration:"none" }}
                 >
                   <FontAwesomeIcon icon={faShoppingCart} />
                   Cart
+                
                 </a>
+                </button>
               </li>
             </ul>
           </div>

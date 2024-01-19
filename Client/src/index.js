@@ -14,15 +14,19 @@ import VerifyEmail from './components/VerifyEmail';
 import ProductDetailComponent from './components/productDetalComponent';
 import SearchResultComponent from './components/SearchResultComponent';
 import reportWebVitals from './reportWebVitals';
+import Cart from './components/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { CartProvider } from './CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <CartProvider>
   <Router>
     <Header />
+   
  <Routes> 
-      <Route path="/" element={ <Homepage /> } />
+
+      <Route path="/" element={<Homepage /> } />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
       <Route path="/purchase" element={<PurchaseComponent />} />
@@ -31,11 +35,13 @@ root.render(
       <Route path="/product/getOneProducts/:id" element={<ProductDetailComponent />} />
       <Route path="/purchase/:id/:quantity" element={<PurchaseComponent />} />
       <Route path="/search/:keyword" element={<SearchResultComponent />} />
-
+       < Route path="/cart" element={ <Cart /> } />
         {/* Add more routes as needed */}
   </Routes>
     <Footer />
-</Router>,
+ 
+</Router>
+</CartProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
